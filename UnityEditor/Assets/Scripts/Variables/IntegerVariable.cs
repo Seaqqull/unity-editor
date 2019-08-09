@@ -1,0 +1,39 @@
+﻿using UnityEngine;
+
+[CreateAssetMenu(menuName = "Variable/Integer")]
+public class IntegerVariable : ScriptableObject
+{
+#if UNITY_EDITOR
+    [Multiline]
+    [SerializeField] private string _description = "";
+#endif
+    [SerializeField] private int _value;
+
+    public int Value
+    {
+        get { return this._value; }
+        private set { this._value = value; }
+    }
+
+
+    public void SetValue(int value)
+    {
+        Value = value;
+    }
+
+    public void SetValue(IntegerVariable value)
+    {
+        Value = value.Value;
+    }
+
+
+    public void ApplyChange(int amount)
+    {
+        Value += amount;
+    }
+
+    public void ApplyChange(IntegerVariable amount)
+    {
+        Value += amount.Value;
+    }
+}
