@@ -4,8 +4,10 @@
 public class IntegerVariable : ScriptableObject
 {
 #if UNITY_EDITOR
+#pragma warning disable 0414
     [Multiline]
     [SerializeField] private string _description = "";
+#pragma warning restore 0414
 #endif
     [SerializeField] private int _value;
 

@@ -6,7 +6,9 @@ public class IntegerReference
 {
     [SerializeField] private bool UseConstant = true;
     [SerializeField] private int ConstantValue;
+#pragma warning disable 0649
     [SerializeField] private IntegerVariable Variable;
+#pragma warning restore 0649
 
     public int Value
     {

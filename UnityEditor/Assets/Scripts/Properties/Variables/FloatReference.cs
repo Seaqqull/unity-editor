@@ -6,7 +6,9 @@ public class FloatReference
 {
     [SerializeField] private bool UseConstant = true;
     [SerializeField] private float ConstantValue;
+#pragma warning disable 0649
     [SerializeField] private FloatVariable Variable;
+#pragma warning restore 0649
 
     public float Value
     {
